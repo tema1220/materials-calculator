@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head> 
+<body>
+    <div class="container">
+        <div id="input-section">
+            <h2><i class="fas fa-calculator"></i> Ввод данных</h2>
+            <label for="material">Выберите материал:</label>
+            <select id="material" class="custom-select"></select><br><br>
+
+            <label for="pipe">Выберите трубу:</label>
+            <select id="pipe" class="custom-select"></select><br><br>
+
+            <label for="width">Ширина (м):</label>
+            <input type="number" id="width" min="5" max="25" step="0.2"><br><br>
+
+            <label for="length">Длина (м):</label>
+            <input type="number" id="length" min="5" max="50" step="0.2"><br><br>
+
+            <label for="strength">Выбор прочности:</label>
+            <select id="strength" class="custom-select"></select><br><br>
+
+            <button id="calculate"><i class="fas fa-calculator"></i> Рассчитать</button>
+            <button id="reset-button">Сбросить результаты</button>
+        </div>
+        <div id="result-section">
+            <h2><i class="fas fa-chart-line"></i> Результат</h2>
+            <div id="area"></div>
+            <div id="cell-size"></div>
+            <table id="materials-table">
+                <thead>
+                    <tr>
+                        <th>Наименование</th>
+                        <th>ед.</th>
+                        <th>кол-во</th>
+                        <th>сумма</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="total"></div>
+        </div>
+        <button id="theme-toggle">Переключить тему</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
